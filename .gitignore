@@ -22,3 +22,6 @@ Thumbs.db
 
 # Test scratch
 .pytest_cache/
+
+# Local WebUI config (may contain API keys)
+webui_config.json

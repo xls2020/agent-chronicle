@@ -83,7 +83,7 @@ _DEFAULT_REPLACEMENTS = [
 # Generic fallback blacklist (used when the rules file ships an empty blacklist).
 # IMPORTANT: these are SHAPE-based (credential-shaped) patterns, NOT bare-word
 # matches. A commit title like "remove hardcoded token" is a technical phrase,
-# not a leak; but "token=sk-abc123" or "api_key: xyz" IS a leak.
+# not a leak; but a credential assignment (e.g. `secret=abc123`) IS a leak.
 _DEFAULT_BLACKLIST = [
     re.compile(r"(?i)\b(?:token|api[_-]?key|secret|password|authorization|bearer)\b\s*[=:]\s*[^\s,;]+"),
     re.compile(r"(?i)\b(?:sk|ghp|gho|ghu|ak|Bearer)[-_][A-Za-z0-9_-]{8,}\b"),

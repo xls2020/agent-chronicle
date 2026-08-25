@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Chronicle · 可追溯的 AI 文学改写系统</title>
+<style>
+  :root {
+    --bg: #faf9f7;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #8b5e3c;
+    --line: #e4e0da;
+    --card: #ffffff;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.7;
+    max-width: 860px; margin: 0 auto; padding: 0 20px 80px;
+  }
+  header { padding: 56px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+  h1 { font-size: 1.9rem; font-weight: 600; letter-spacing: -.01em; }
+  h1 .accent { color: var(--accent); }
+  .tagline { color: var(--muted); margin-top: 10px; font-size: 1.02rem; }
+  nav { display: flex; gap: 6px; margin: 22px 0 30px; flex-wrap: wrap; }
+  nav button {
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    padding: 7px 16px; border-radius: 999px; cursor: pointer; font-size: .92rem;
+    transition: all .15s;
+  }
+  nav button:hover { border-color: var(--accent); color: var(--accent); }
+  nav button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .25s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; box-shadow: var(--shadow); }
+  .novel { white-space: pre-wrap; font-family: inherit; font-size: 1.02rem; }
+  .novel h1 { font-size: 1.5rem; margin-bottom: 18px; }
+  .event { border-left: 3px solid var(--line); padding-left: 14px; margin-bottom: 14px; }
+  .event .meta { color: var(--muted); font-size: .82rem; margin-bottom: 2px; }
+  .event .emotion { display: inline-block; font-size: .75rem; padding: 1px 8px; border-radius: 999px; background: #f2efe9; color: var(--accent); margin-left: 6px; }
+  .map-item { margin-bottom: 18px; }
+  .map-item .src { color: var(--muted); font-size: .85rem; }
+  .offset { color: var(--accent); font-size: .85rem; margin-top: 4px; }
+  .offset-tag { display: inline-block; font-size: .72rem; padding: 1px 8px; border-radius: 999px; background: #f2efe9; color: var(--accent); margin-right: 6px; }
+  h2 { font-size: 1.15rem; margin-bottom: 14px; font-weight: 600; }
+  .muted { color: var(--muted); }
+  label { display: block; font-size: .86rem; color: var(--muted); margin: 12px 0 4px; }
+  input, select {
+    width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px;
+    font-size: .95rem; background: var(--card); color: var(--ink);
+  }
+  input:focus, select:focus { outline: none; border-color: var(--accent); }
+  button.primary {
+    margin-top: 18px; background: var(--accent); color: #fff; border: none;
+    padding: 10px 22px; border-radius: 8px; cursor: pointer; font-size: .95rem;
+  }
+  button.primary:hover { opacity: .9; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; text-align: center; }
+  .hidden { display: none; }
+  .notice { font-size: .85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Agent <span class="accent">Chronicle</span></h1>
+  <p class="tagline">我们记录工作智能体的真实事实，然后让一个独立的写作智能体基于这些事实写小说。每一段小说都能对应回原始事实。我们保留了这个对应关系。</p>
+</header>
+
+<nav>
+  <button data-panel="novel" class="active">小说</button>
+  <button data-panel="events">机械记录</button>
+  <button data-panel="mapping">对照</button>
+  <button data-panel="config">LLM 配置</button>
+</nav>
+
+<!-- 1. 小说 -->
+<div id="panel-novel" class="panel active">
+  <div class="card" id="chronicle-list"></div>
+  <div class="card novel" id="chronicle-body"></div>
+</div>
+
+<!-- 2. 机械记录 -->
+<div id="panel-events" class="panel">
+  <div class="card">
+    <p class="notice">脱敏后的机械事件样本。完整日志属于私有系统，不公开。</p>
+  </div>
+  <div class="card" id="events-body"></div>
+</div>
+
+<!-- 3. 对照 -->
+<div id="panel-mapping" class="panel">
+  <div class="card">
+    <p class="notice">每一段小说都可追溯回脱敏事件。偏移（A–F）描述"事实 → 叙事"如何转化。</p>
+  </div>
+  <div class="card" id="mapping-body"></div>
+</div>
+
+<!-- 4. LLM 配置 -->
+<div id="panel-config" class="panel">
+  <div class="card">
+    <h2>接入任意 LLM</h2>
+    <label>后端</label>
+    <select id="cfg-kind">
+      <option value="openai">OpenAI</option>
+      <option value="anthropic">Anthropic</option>
+      <option value="deepseek">DeepSeek</option>
+      <option value="ollama">Ollama（本地）</option>
+      <option value="cli">CLI 命令行</option>
+    </select>
+    <label>API Key（可留空）</label>
+    <input id="cfg-key" type="password" placeholder="sk-...">
+    <label>Base URL（可留空，用默认）</label>
+    <input id="cfg-url" placeholder="https://...">
+    <label>模型名（可留空）</label>
+    <input id="cfg-model" placeholder="model">
+    <button class="primary" onclick="saveConfig()">保存配置</button>
+    <p class="notice" id="cfg-msg"></p>
+  </div>
+</div>
+
+<footer>我们不做结论。我们只保存距离。<br>Agent Chronicle · MIT License</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+
+// tab switching
+document.querySelectorAll('nav button').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
+  };
+});
+
+// 1. chronicles
+async function loadChronicles() {
+  const res = await fetch('/api/chronicles');
+  const list = await res.json();
+  const box = $('#chronicle-list');
+  box.innerHTML = '<h2>章节</h2>' + list.map(c =>
+    `<button class="primary" style="margin-right:8px" onclick="openChronicle('${c.path}')">${c.title}</button>`
+  ).join('') || '<p class="muted">暂无章节</p>';
+  if (list.length) openChronicle(list[0].path);
+}
+async function openChronicle(name) {
+  const res = await fetch('/api/chronicle/' + encodeURIComponent(name));
+  const c = await res.json();
+  $('#chronicle-body').innerHTML = '<h1>' + (c.title || c.name) + '</h1>' +
+    '<div>' + escapeHtml(c.content).replace(/\n/g, '<br>') + '</div>';
+}
+
+// 2. events
+async function loadEvents() {
+  const res = await fetch('/api/events');
+  const evs = await res.json();
+  $('#events-body').innerHTML = evs.map(e => `
+    <div class="event">
+      <div class="meta">#${e.seq} · ${e.timestamp} · ${e.agent}<span class="emotion">${e.emotion}</span></div>
+      <div>${escapeHtml(e.content)}</div>
+    </div>`).join('') || '<p class="muted">暂无事件</p>';
+}
+
+// 3. mapping
+async function loadMapping() {
+  const res = await fetch('/api/mapping');
+  const m = await res.json();
+  $('#mapping-body').innerHTML = (m.mappings || []).map(x => `
+    <div class="map-item">
+      <div class="src">← ${(x.source_event_ids || []).join(', ')}</div>
+      <div><strong>小说：</strong>${escapeHtml(x.narrative_paragraph)}</div>
+      <div class="offset">
+        ${(x.offset_types || []).map(t => `<span class="offset-tag">${t}</span>`).join('')}
+        ${escapeHtml(x.offset_description || '')}
+      </div>
+    </div>`).join('') || '<p class="muted">暂无对照</p>';
+}
+
+// 4. config
+async function loadConfig() {
+  const res = await fetch('/api/config');
+  const c = await res.json();
+  if (c.kind) $('#cfg-kind').value = c.kind;
+  if (c.model) $('#cfg-model').value = c.model;
+  if (c.base_url) $('#cfg-url').value = c.base_url;
+}
+async function saveConfig() {
+  const body = {
+    kind: $('#cfg-kind').value,
+    api_key: $('#cfg-key').value,
+    base_url: $('#cfg-url').value,
+    model: $('#cfg-model').value,
+  };
+  const res = await fetch('/api/config', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(body),
+  });
+  const r = await res.json();
+  $('#cfg-msg').textContent = r.ok ? '已保存（仅存本地，不提交）' : '保存失败';
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+loadChronicles(); loadEvents(); loadMapping(); loadConfig();
+</script>
+</body>
+</html>
