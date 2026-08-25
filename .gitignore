@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secrets
+*.key
+*.pem
+.env
+*.env
+
+# Local data (never commit real logs)
+*.jsonl
+!samples/*.jsonl
+!chronicles/*.md
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Test scratch
+.pytest_cache/
