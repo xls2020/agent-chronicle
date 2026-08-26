@@ -1,5 +1,7 @@
 # Samples — 脱敏事件 + 对照关系
 
+> [English](README_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [小说全文](../chronicles/README.md)
+
 本目录展示「从机械记录到小说叙事」的对照，是项目的**核心研究接口**。
 
 ## 文件

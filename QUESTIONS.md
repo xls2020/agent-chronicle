@@ -1,5 +1,7 @@
 # Questions — 开放问题
 
+> [English](QUESTIONS_EN.md) | 中文 · [README](README.md) / [README_EN.md](README_EN.md)
+
 本项目不回答问题。它收集问题，让它们变得可见。
 
 以下问题来自真实的观察过程，欢迎在 Issue 中讨论：

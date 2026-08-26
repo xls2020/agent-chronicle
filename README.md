@@ -90,9 +90,9 @@ python app.py
 ```
 agent-chronicle/
 ├── README.md / README_EN.md   # 中英文门面
-├── ARCHITECTURE.md            # 架构文档
-├── ROADMAP.md                 # 路线图
-├── QUESTIONS.md               # 开放问题
+├── ARCHITECTURE.md / _EN.md   # 架构文档（中/英）
+├── ROADMAP.md / ROADMAP_EN.md # 路线图（中/英）
+├── QUESTIONS.md / _EN.md      # 开放问题（中/英）
 ├── LICENSE                    # MIT
 ├── app.py                     # WebUI 入口
 ├── src/

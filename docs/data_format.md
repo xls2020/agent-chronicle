@@ -1,5 +1,7 @@
 # 数据格式说明
 
+> [English](data_format_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [数据来源](data_source.md)
+
 本仓库公开的机械记录使用 JSONL（每行一个 JSON 对象）。
 
 ## 脱敏事件格式（`samples/desensitized_events.jsonl`）

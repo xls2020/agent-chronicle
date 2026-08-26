@@ -1,5 +1,7 @@
 # 数据来源与公开边界
 
+> [English](data_source_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [数据格式](data_format.md)
+
 ## 数据来源
 
 本项目的所有叙事文本，均来源于一个**真实运行的**多智能体系统在任务执行期间的机械记录。

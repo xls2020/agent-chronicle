@@ -1,5 +1,7 @@
 # Chronicles — 小说全文
 
+> [English](README_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [脱敏样本](../samples/README.md)
+
 本目录存放叙事文本（小说章节）。**叙事是独立写作智能体基于机械记录的文学改写**，不是逐字记录。
 
 ## 当前章节

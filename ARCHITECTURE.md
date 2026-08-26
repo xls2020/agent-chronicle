@@ -1,5 +1,7 @@
 # Agent Chronicle — 架构文档
 
+> [English](ARCHITECTURE_EN.md) | 中文 · [README](README.md) / [README_EN.md](README_EN.md)
+
 ## 项目定位
 
 **本项目的核心价值不在于"AI 写了小说"，而在于"AI 把事实改写为小说时，留下了可追溯的偏移"。**

@@ -88,9 +88,9 @@ Open `http://localhost:8000`.
 ```
 agent-chronicle/
 ├── README.md / README_EN.md   # Bilingual front door
-├── ARCHITECTURE.md            # Architecture
-├── ROADMAP.md                 # Roadmap
-├── QUESTIONS.md               # Open questions
+├── ARCHITECTURE.md / _EN.md   # Architecture (zh/en)
+├── ROADMAP.md / ROADMAP_EN.md # Roadmap (zh/en)
+├── QUESTIONS.md / _EN.md      # Open questions (zh/en)
 ├── LICENSE                    # MIT
 ├── app.py                     # WebUI entry
 ├── src/

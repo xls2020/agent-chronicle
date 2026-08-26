@@ -1,5 +1,7 @@
 # Roadmap — 路线图
 
+> [English](ROADMAP_EN.md) | 中文 · [README](README.md) / [README_EN.md](README_EN.md)
+
 ## 现状（v0.1）
 
 - ✅ 机械记录层（Recorder）：捕获 + 结构化存储 + 脱敏
