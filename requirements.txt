@@ -1,2 +1,4 @@
 fastapi>=0.110
 uvicorn>=0.27
+# tests (unittest discover -s tests) need an HTTP client for TestClient
+httpx>=0.27

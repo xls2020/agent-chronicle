@@ -47,11 +47,14 @@ def list_chronicles():
 
 @app.get("/api/chronicle/{name}")
 def get_chronicle(name: str):
-    # safe path: only allow .md under chronicles/
-    safe = (CHRONICLES / name).resolve()
-    if not safe.is_relative_to(CHRONICLES.resolve()) or safe.suffix != ".md" or not safe.exists():
-        return JSONResponse({"error": "not found"}, status_code=404)
-    return {"name": name, "content": safe.read_text(encoding="utf-8", errors="replace")}
+    # safe path: only allow .md under chronicles/; accept name with or
+    # without the ".md" extension (the list endpoint returns the bare stem).
+    candidates = [name] if name.endswith(".md") else [name, name + ".md"]
+    for cand in candidates:
+        safe = (CHRONICLES / cand).resolve()
+        if safe.is_relative_to(CHRONICLES.resolve()) and safe.suffix == ".md" and safe.exists():
+            return {"name": name, "content": safe.read_text(encoding="utf-8", errors="replace")}
+    return JSONResponse({"error": "not found"}, status_code=404)
 
 
 @app.get("/api/events")
