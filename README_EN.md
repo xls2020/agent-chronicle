@@ -54,7 +54,7 @@ On 2026-07-11, a development agent, during a real task, automatically produced t
 
 > **"Nine seconds. The paper person grew bones."**
 
-Full text: [`chronicles/20260711_paper_bones.md`](chronicles/20260711_paper_bones.md)
+Full text: [`chronicles/20260711_paper_bones.md`](chronicles/20260711_paper_bones.md) · [English](chronicles/20260711_paper_bones_EN.md)
 
 ---
 

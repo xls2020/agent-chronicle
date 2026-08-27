@@ -8,6 +8,7 @@
 
 - **`20260711_paper_bones.md`** — 《九秒，纸人长出了骨头》（2026-07-11）
   - 这是项目的起点：一个 AI 系统在真实工作中自动生成的叙事文本
+  - English: [`20260711_paper_bones_EN.md`](20260711_paper_bones_EN.md)
   - 对应脱敏事件见 [`../samples/desensitized_events.jsonl`](../samples/desensitized_events.jsonl)
   - 逐句对照见 [`../samples/mapping.json`](../samples/mapping.json)
 
