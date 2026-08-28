@@ -1,8 +1,12 @@
 # Chronicles — Full Novel Text
 
-> [中文](README.md) | English · [README](../README.md) / [README_EN.md](../README_EN.md) · [Samples](../samples/README_EN.md)
+> [中文](README.md) | English · [README](../README.md) / [README_EN.md](../README_EN.md) · [Samples](../samples/README_EN.md) · [Archive](../_archived/)
 
 This directory holds the narrative text (novel chapters). **The narrative is a literary rewriting by an independent writing agent based on mechanical records — not a verbatim transcript.**
+
+## Title Scheme
+
+**《九秒，纸人长出了骨头》** (Nine Seconds, the Paper Man Grew Bones) — provisional title, from the real chapter name of `20260711_paper_bones.md`. Will be renamed 《证明者：欧几里得的学徒们》 (The Provers: Euclid's Apprentices) once the first proposition is proved.
 
 ## Current Chapter
 
@@ -11,6 +15,11 @@ This directory holds the narrative text (novel chapters). **The narrative is a l
   - English edition: [`20260711_paper_bones_EN.md`](20260711_paper_bones_EN.md)
   - Corresponding desensitized events: [`../samples/desensitized_events.jsonl`](../samples/desensitized_events.jsonl)
   - Line-by-line mapping: [`../samples/mapping.json`](../samples/mapping.json)
+
+> **Serialization status (2026-08-28)**: The first desensitized serial (Scriptorium Workshop world, 14 chapters) was **archived** to
+> [`../_archived/scriptorium-workshop/`](../_archived/scriptorium-workshop/) due to readability issues (obscure metaphors, unclear character roles).
+> A rewrite is in progress — anchored to this ch03's style: **character purposes made explicit, metaphor density lowered, emotional arc prioritized**
+> (see [`../MAINTENANCE/DESENSITIZATION_GUIDE.md`](../MAINTENANCE/DESENSITIZATION_GUIDE.md) §5 fidelity layer).
 
 ## Originality Statement
 

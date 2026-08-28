@@ -1,6 +1,6 @@
 # Chronicles — 小说全文
 
-> [English](README_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [脱敏样本](../samples/README.md) · [脱敏方法论](../MAINTENANCE/DESENSITIZATION_GUIDE.md)
+> [English](README_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [脱敏样本](../samples/README.md) · [脱敏方法论](../MAINTENANCE/DESENSITIZATION_GUIDE.md) · [归档](../_archived/)
 
 本目录存放叙事文本（小说章节）。**叙事是独立写作智能体基于机械记录的文学改写**，不是逐字记录。
 
@@ -17,28 +17,10 @@
   - 对应脱敏事件见 [`../samples/desensitized_events.jsonl`](../samples/desensitized_events.jsonl)
   - 逐句对照见 [`../samples/mapping.json`](../samples/mapping.json)
 
-**连载章节**（手稿工坊世界 · 对应真实机械记录的语义级脱敏重写）：
-
-| 章 | 标题 | 对应真实时间段 |
-|----|------|--------------|
-| 第01回 | 修好了一百九十六座驿站，路还是不通 | 7-2 ~ 7-4 |
-| 第02回 | 空喙回巢 | 7-3 ~ 7-4 |
-| 第03回 | 九秒，纸人长出了骨头（已开源） | 7-11 |
-| 第04回 | 第六次提醒，以及三万八千三百二十一个字节的告别 | 7-15 ~ 7-20 |
-| 第05回 | 五刻之后，心跳如期而至 | 7-29 ~ 8-1 |
-| 第06回 | 十四，还差一 | 8-2 ~ 8-6 |
-| 第07回 | 三十一次试金，一条路 | 8-7 ~ 8-10 |
-| 第08回 | 死一次，长一寸 | 8-11 ~ 8-12 |
-| 第09回 | 一百二十一比零的夜晚 | 8-13 |
-| 第10回 | 我记得有啊 | 8-20 ~ 8-22 |
-| 第11回 | 一万二千一百八十七 | 8-23 |
-| 第12回 | 三块金砖，零借外力 | 8-24 |
-| 第13回 | 深夜，纸人自己走路 | 8-25 |
-| 第14回 | 六扇门，一块地基 | 8-26 |
-| 第15回 | 成功像水，流过指缝 | 8-27 |
-
-- 每章映射对照（章 → 真实时间段 → 情感核心 → 真实机械记录）见 [`../mapping/`](../mapping/)
-- 脱敏方法论（词汇表 / 保真层 / 防泄漏）见 [`../MAINTENANCE/DESENSITIZATION_GUIDE.md`](../MAINTENANCE/DESENSITIZATION_GUIDE.md)
+> **连载状态（2026-08-28 更新）**: 首版脱敏连载（手稿工坊世界，14 章）因可读性问题已**归档**至
+> [`../_archived/scriptorium-workshop/`](../_archived/scriptorium-workshop/)（含逐章映射）。
+> 新版本重写中——以本 ch03《九秒，纸人长出了骨头》为风格锚点：**人物目的自然交代、
+> 隐喻密度可感降低、情感弧优先**（见 [`../MAINTENANCE/DESENSITIZATION_GUIDE.md`](../MAINTENANCE/DESENSITIZATION_GUIDE.md) §五 保真层）。
 
 ## 原始性声明
 
