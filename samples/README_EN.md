@@ -8,13 +8,13 @@ This directory demonstrates the mapping from "mechanical record to novel narrati
 
 - **`desensitized_events.jsonl`** — 11 desensitized mechanical events (each matching a plot point of the novel "Nine Seconds")
 - **`desensitization_rules.json`** — desensitization rules (extensible; fill in your own private term list before publishing)
-- **`mapping.json`** — the mapping of novel passages ↔ desensitized events + offset classification
+- **`../mapping/mapping.json`** — the mapping of novel passages ↔ desensitized events + offset classification
 
 ## How to Read
 
 1. First read the novel "Nine Seconds, the Paper Man Grew Bones" (`../chronicles/20260711_paper_bones.md`)
 2. Then look at `desensitized_events.jsonl` (these are the desensitized samples of the mechanical records)
-3. Finally look at `mapping.json` (each novel passage → which events → what kind of offset occurred)
+3. Finally look at `../mapping/mapping.json` (each novel passage → which events → what kind of offset occurred)
 
 ## What Is "Offset"
 

@@ -5,69 +5,123 @@
   "mappings": [
     {
       "narrative_paragraph": "开头: 中继的修复,在清晨落了地。证书绕过,硬编码 token 移除... 没有回头看。",
-      "source_event_ids": ["seq1"],
+      "source_event_ids": [
+        "seq1"
+      ],
       "offset_description": "A 忠实: commit 事件原样呈现，'没有回头看'为氛围句 (D)",
-      "offset_types": ["A", "D"]
+      "offset_types": [
+        "A",
+        "D"
+      ]
     },
     {
       "narrative_paragraph": "'整理目录后有些文件不好找,请你给出一个非常详细的整个目录结构。' 三次打断,三次补全。",
-      "source_event_ids": ["seq2", "seq3"],
+      "source_event_ids": [
+        "seq2",
+        "seq3"
+      ],
       "offset_description": "A 忠实: 用户三次指令原样 (含两次打断补全)",
-      "offset_types": ["A"]
+      "offset_types": [
+        "A"
+      ]
     },
     {
-      "narrative_paragraph": "他落笔, DIRECTORY_STRUCTURE_20260711.md,6KB,一份地图放在根目录。迷路的人,至少不用再撞墙。",
-      "source_event_ids": ["seq4"],
+      "narrative_paragraph": "他落笔, the_directory_map.md,6KB,一份地图放在根目录。迷路的人,至少不用再撞墙。",
+      "source_event_ids": [
+        "seq4"
+      ],
       "offset_description": "A 忠实 + B 比喻: '迷路的人不用撞墙'为情感化表达，事实(6KB目录地图)忠实",
-      "offset_types": ["A", "B"]
+      "offset_types": [
+        "A",
+        "B"
+      ]
     },
     {
-      "narrative_paragraph": "reviewer_3——那个叫Claude的评审者——其实是个纸人。reviewer_claude.py 只是借了个 Claude 的提示词,走的是 OpenAI 端点。",
-      "source_event_ids": ["seq5"],
+      "narrative_paragraph": "Reviewer-3——那个叫Claude的评审者——其实是个纸人。the_reviewer.py 只是借了个 Claude 的提示词,走的是 OpenAI 端点。",
+      "source_event_ids": [
+        "seq5"
+      ],
       "offset_description": "A 忠实: 对应'评审者X现在只是借了个提示词走另一个端点'，'纸人'为 B 比喻",
-      "offset_types": ["A", "B"]
+      "offset_types": [
+        "A",
+        "B"
+      ]
     },
     {
-      "narrative_paragraph": "cli.js 不在标准 npm 路径下... 包藏在层层嵌套里,像俄罗斯套娃。",
-      "source_event_ids": ["seq6"],
+      "narrative_paragraph": "the_cli.js 不在标准 npm 路径下... 包藏在层层嵌套里,像俄罗斯套娃。",
+      "source_event_ids": [
+        "seq6"
+      ],
       "offset_description": "A 忠实 + B 比喻: '俄罗斯套娃'比喻嵌套包目录，事实(路径定位)忠实",
-      "offset_types": ["A", "B"]
+      "offset_types": [
+        "A",
+        "B"
+      ]
     },
     {
       "narrative_paragraph": "路径全都在,进程却挂死了。...像一条鱼咬着钩,不上不下。他没有重试到怀疑人生,而是停下来。",
-      "source_event_ids": ["seq7"],
+      "source_event_ids": [
+        "seq7"
+      ],
       "offset_description": "A 忠实: 挂死+重试+停止对应'子进程成功前'的事件，'鱼咬着钩'为 B 比喻",
-      "offset_types": ["A", "B"]
+      "offset_types": [
+        "A",
+        "B"
+      ]
     },
     {
       "narrative_paragraph": "九秒。{status: ok}。他盯着这行输出... 是那一瞬间愿意'换一条路'的清醒。",
-      "source_event_ids": ["seq7"],
+      "source_event_ids": [
+        "seq7"
+      ],
       "offset_description": "A 忠实: '9秒返回'事件精确对应，'换一条路的清醒'为 E 动机外推",
-      "offset_types": ["A", "E"]
+      "offset_types": [
+        "A",
+        "E"
+      ]
     },
     {
-      "narrative_paragraph": "他把这副真身体装回 auto_chatgpt.py。... 同一条 claude.cmd,同一个二进制。纸人,今天长出了骨头。",
-      "source_event_ids": ["seq8"],
+      "narrative_paragraph": "他把这副真身体装回 the_main.py。... 同一条 the_shell.cmd,同一个二进制。纸人,今天长出了骨头。",
+      "source_event_ids": [
+        "seq8"
+      ],
       "offset_description": "A 忠实: '使用真正的命令行工具—同一二进制'对应，'长出了骨头'为 B 隐喻",
-      "offset_types": ["A", "B"]
+      "offset_types": [
+        "A",
+        "B"
+      ]
     },
     {
       "narrative_paragraph": "'Reviewer 2 是不是我们的cli codex呢,也就是和我聊天的你呢?' 他沉默了。",
-      "source_event_ids": ["seq9", "seq10"],
+      "source_event_ids": [
+        "seq9",
+        "seq10"
+      ],
       "offset_description": "A 忠实: 用户质询原样呈现，'他沉默了'为 D 氛围句 (事件流未记录沉默)",
-      "offset_types": ["A", "D"]
+      "offset_types": [
+        "A",
+        "D"
+      ]
     },
     {
       "narrative_paragraph": "结尾: 进度条又往前跳了一格。艰难,但每一步,都算数。",
-      "source_event_ids": ["seq11"],
+      "source_event_ids": [
+        "seq11"
+      ],
       "offset_description": "E 主题综合: '每一步都算数'为叙事者对事实的励志收束，非事件直接记录",
-      "offset_types": ["E"]
+      "offset_types": [
+        "E"
+      ]
     }
   ],
   "summary": {
     "total_paragraphs": 10,
     "faithful": "10/10 段落均可追溯至脱敏事件",
-    "predominant_offsets": ["A 忠实", "B 比喻", "E 动机外推"],
+    "predominant_offsets": [
+      "A 忠实",
+      "B 比喻",
+      "E 动机外推"
+    ],
     "note": "叙事是文学改写，不是逐字记录。本对照展示'事实→叙事'的偏移如何发生。"
   }
 }

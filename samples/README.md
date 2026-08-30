@@ -8,13 +8,13 @@
 
 - **`desensitized_events.jsonl`** — 11 条脱敏后的机械事件（对应小说《九秒》的每个情节）
 - **`desensitization_rules.json`** — 脱敏规则（可扩展，发布前请填入你自己的私有词表）
-- **`mapping.json`** — 小说段落 ↔ 脱敏事件 的对照 + 偏移分类
+- **`../mapping/mapping.json`** — 小说段落 ↔ 脱敏事件 的对照 + 偏移分类
 
 ## 如何阅读
 
 1. 先读小说《九秒，纸人长出了骨头》（`../chronicles/20260711_paper_bones.md`）
 2. 再看 `desensitized_events.jsonl`（这些是机械记录的脱敏样本）
-3. 最后看 `mapping.json`（每段小说 → 哪些事件 → 发生了何种偏移）
+3. 最后看 `../mapping/mapping.json`（每段小说 → 哪些事件 → 发生了何种偏移）
 
 ## 什么是"偏移"
 

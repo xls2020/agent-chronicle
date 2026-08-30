@@ -70,7 +70,7 @@ Agent Chronicle 是一个**可追溯的 AI 文学改写系统**，三层结构�
 用于展示从事实记录到小说叙事的对应关系。样本经过处理，隐藏了项目名、路径和敏感细节。
 
 - [脱敏事件样本](samples/desensitized_events.jsonl)
-- [对照关系](samples/mapping.json)
+- [对照关系](mapping/mapping.json)
 - [脱敏规则](samples/desensitization_rules.json)
 
 ---
@@ -106,7 +106,8 @@ agent-chronicle/
 │   ├── narrator/              # 第二层：AI 文学改写（LLM 适配器）
 │   └── webui/                 # 极简前端
 ├── chronicles/                # 小说全文
-├── samples/                   # 脱敏样本 + 对照
+├── samples/                   # 脱敏样本
+├── mapping/                   # 小说段落 ↔ 脱敏事件 对照（mapping.json）
 ├── docs/                      # 数据格式 / 脱敏规则 / 数据来源
 └── tests/                     # 测试（含防泄漏门禁）
 ```

@@ -21,7 +21,7 @@
 {"seq": 7, "event_type": "action", "timestamp": "2026-07-11T11:58:00", "agent": "agent", "emotion": "breakthrough", "content": "命令行子进程成功了！返回 ok，9秒。关键：改用标准输入管道代替 -p 参数。"}
 ```
 
-## 对照格式（`samples/mapping.json`）
+## 对照格式（`mapping/mapping.json`）
 
 | 字段 | 说明 |
 |------|------|

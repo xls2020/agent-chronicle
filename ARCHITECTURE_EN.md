@@ -81,7 +81,7 @@ The distance between "returned in 9 seconds" and "he stared at the output and le
 - **Role**: establish correspondence between novel passages and raw record entries
 - **Principle**: **traceable, verifiable, researchable**
 - **Output**: mapping table (public)
-- **File**: `samples/mapping.json`
+- **File**: `mapping/mapping.json`
 
 ---
 

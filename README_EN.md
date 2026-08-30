@@ -67,7 +67,7 @@ More chapters:
 To protect a system still under active development, the **full mechanical log is NOT public**. We provide only desensitized samples to demonstrate the fact-to-narrative conversion method. Samples are processed to hide project names, paths, and sensitive details.
 
 - [Desensitized events](samples/desensitized_events.jsonl)
-- [Correspondence mapping](samples/mapping.json)
+- [Correspondence mapping](mapping/mapping.json)
 - [Desensitization rules](samples/desensitization_rules.json)
 
 ---
@@ -102,7 +102,8 @@ agent-chronicle/
 │   ├── narrator/              # Layer 2: AI literary rewriting (LLM adapters)
 │   └── webui/                 # Minimal frontend
 ├── chronicles/                # Novels
-├── samples/                   # Desensitized samples + mapping
+├── samples/                   # Desensitized samples
+├── mapping/                   # Novel-passage ↔ event correspondence (mapping.json)
 ├── docs/                      # Data format / desensitization rules / data source
 └── tests/                     # Tests (incl. leak gate)
 ```

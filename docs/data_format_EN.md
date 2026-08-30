@@ -21,7 +21,7 @@ The mechanical records published in this repository use JSONL (one JSON object p
 {"seq": 7, "event_type": "action", "timestamp": "2026-07-11T11:58:00", "agent": "agent", "emotion": "breakthrough", "content": "Command-line subprocess succeeded! Returned ok, 9 seconds. Key: use a standard input pipe instead of the -p flag."}
 ```
 
-## Mapping Format (`samples/mapping.json`)
+## Mapping Format (`mapping/mapping.json`)
 
 | Field | Description |
 |-------|-------------|
