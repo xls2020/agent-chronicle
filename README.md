@@ -109,7 +109,7 @@ agent-chronicle/
 ├── samples/                   # 脱敏样本
 ├── mapping/                   # 小说段落 ↔ 脱敏事件 对照（mapping.json）
 ├── docs/                      # 数据格式 / 脱敏规则 / 数据来源
-└── tests/                     # 测试（含防泄漏门禁）
+└── tests/                     # 测试
 ```
 
 ---
