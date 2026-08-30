@@ -26,7 +26,7 @@
       ]
     },
     {
-      "narrative_paragraph": "他落笔, the_directory_map.md,6KB,一份地图放在根目录。迷路的人,至少不用再撞墙。",
+      "narrative_paragraph": "他落笔, `DIRECTORY_STRUCTURE_20260711.md`,6KB,一份地图放在根目录。迷路的人,至少不用再撞墙。",
       "source_event_ids": [
         "seq4"
       ],
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "narrative_paragraph": "Reviewer-3——那个叫Claude的评审者——其实是个纸人。the_reviewer.py 只是借了个 Claude 的提示词,走的是 OpenAI 端点。",
+      "narrative_paragraph": "reviewer_3——那个叫Claude的评审者——其实是个纸人。`reviewer_claude.py` 只是借了个 Claude 的提示词,走的是 OpenAI 端点。",
       "source_event_ids": [
         "seq5"
       ],
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "narrative_paragraph": "the_cli.js 不在标准 npm 路径下... 包藏在层层嵌套里,像俄罗斯套娃。",
+      "narrative_paragraph": "`cli.js` 不在标准 npm 路径下... 包藏在层层嵌套里,像俄罗斯套娃。",
       "source_event_ids": [
         "seq6"
       ],
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "narrative_paragraph": "他把这副真身体装回 the_main.py。... 同一条 the_shell.cmd,同一个二进制。纸人,今天长出了骨头。",
+      "narrative_paragraph": "他把这副真身体装回 `auto_chatgpt.py`。... 同一条 `claude.cmd`,同一个二进制。纸人,今天长出了骨头。",
       "source_event_ids": [
         "seq8"
       ],
