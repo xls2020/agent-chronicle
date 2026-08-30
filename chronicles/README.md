@@ -1,6 +1,6 @@
 # Chronicles — 小说全文
 
-> [English](README_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [脱敏样本](../samples/README.md) · [脱敏方法论](../MAINTENANCE/DESENSITIZATION_GUIDE.md) · [归档](../_archived/)
+> [English](README_EN.md) | 中文 · [README](../README.md) / [README_EN.md](../README_EN.md) · [脱敏样本](../samples/README.md)
 
 本目录存放叙事文本（小说章节）。**叙事是独立写作智能体基于机械记录的文学改写**，不是逐字记录。
 
@@ -15,18 +15,16 @@
   - 这是项目的起点：一个 AI 系统在真实工作中自动生成的叙事文本
   - English: [`20260711_paper_bones_EN.md`](20260711_paper_bones_EN.md)
   - 对应脱敏事件见 [`../samples/desensitized_events.jsonl`](../samples/desensitized_events.jsonl)
-  - 逐句对照见 [`../samples/mapping.json`](../samples/mapping.json)
 
-> **连载状态（2026-08-28 更新）**: 首版脱敏连载（手稿工坊世界，14 章）因可读性问题已**归档**至
-> [`../_archived/scriptorium-workshop/`](../_archived/scriptorium-workshop/)（含逐章映射）。
-> 新版本重写中——以本 ch03《九秒，纸人长出了骨头》为风格锚点：**人物目的自然交代、
-> 隐喻密度可感降低、情感弧优先**（见 [`../MAINTENANCE/DESENSITIZATION_GUIDE.md`](../MAINTENANCE/DESENSITIZATION_GUIDE.md) §五 保真层）。
+- **`20260720_sixth_reminder.md`** — 《第 6 次提醒，以及 38321 个字节的告别》（2026-07-15/20）
+  - 重设计与规则代码绑定：一个系统如何把自己从"靠记忆"改造成"靠流程"
+  - English: [`20260720_sixth_reminder_EN.md`](20260720_sixth_reminder_EN.md)
 
 ## 原始性声明
 
 本仓库中的小说由 AI 系统自主生成，未经人类编辑。它们不代表任何人的观点。它们只是记录。
 
-**完整机械日志属于私有系统，不公开。** 这里只提供脱敏样本（`samples/`）+ 逐章映射（`mapping/`），
+**完整机械日志属于私有系统，不公开。** 这里只提供脱敏样本（`samples/`），
 用于展示「事实 → 叙事」的转换方法与偏移。每章必须保持真实性：事件序列、情感轨迹、时序节奏、
 角色归属、结果、因果全部忠实；只替换名字/场景/技术术语（见脱敏方法论 §5 保真层）。
 
