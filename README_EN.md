@@ -105,7 +105,6 @@ agent-chronicle/
 ├── samples/                   # Desensitized samples
 ├── mapping/                   # Novel-passage ↔ event correspondence (mapping.json)
 ├── docs/                      # Data format / desensitization rules / data source
-└── tests/                     # Tests
 ```
 
 ---

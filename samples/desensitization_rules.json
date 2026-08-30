@@ -1,5 +1,5 @@
 {
-  "_comment": "Desensitization rules for public samples. The `replacements` list applies to every string field. The `blacklist` is checked by assert_sample_clean() as a final leak gate. EXTEND the blacklist with YOUR OWN private project terms before publishing samples — do NOT commit your private terms to this file. This shipped copy contains only generic terms.",
+  "_comment": "Desensitization rules for public samples. The `replacements` list applies to every string field. The `blacklist` is checked by assert_sample_clean() as a final clean check. EXTEND the blacklist with YOUR OWN private project terms before publishing samples — do NOT commit your private terms to this file. This shipped copy contains only generic terms.",
   "replacements": [
     { "pattern": "(?i)\\b(?:token|api[_-]?key|secret|password|authorization|bearer)\\b[=:\\s]+[^\\s,;]+", "to": "***" },
     { "pattern": "(?i)\\b(deepseek[a-z0-9_.-]*|claude[a-z0-9_.-]*|gpt[a-z0-9_.-]*|gemini[a-z0-9_.-]*)\\b", "to": "[llm]" },

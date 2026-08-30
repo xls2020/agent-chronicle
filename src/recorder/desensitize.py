@@ -83,7 +83,7 @@ _DEFAULT_REPLACEMENTS = [
 # Generic fallback blacklist (used when the rules file ships an empty blacklist).
 # IMPORTANT: these are SHAPE-based (credential-shaped) patterns, NOT bare-word
 # matches. A commit title like "remove hardcoded token" is a technical phrase,
-# not a leak; but a credential assignment (e.g. `secret=abc123`) IS a leak.
+# not a fingerprint; but a credential assignment (e.g. `secret=abc123`) is.
 _DEFAULT_BLACKLIST = [
     re.compile(r"(?i)\b(?:token|api[_-]?key|secret|password|authorization|bearer)\b\s*[=:]\s*[^\s,;]+"),
     re.compile(r"(?i)\b(?:sk|ghp|gho|ghu|ak|Bearer)[-_][A-Za-z0-9_-]{8,}\b"),
@@ -129,15 +129,8 @@ _ROLE_MAP = {
     "human": "human",
     "history": "system",
     "git": "system",
-    "codex": "agent",
     "subagent": "subagent",
-    "planner": "subagent",
-    "constructor": "subagent",
-    "repair": "subagent",
-    "assembler": "subagent",
-    "watchdog": "subagent",
     "unknown": "system",
-    "deepseek": "agent",
 }
 
 
@@ -157,7 +150,7 @@ def desensitize_event_for_public(
     replacements = replacements or _DEFAULT_REPLACEMENTS
 
     role_raw = str(event.get("role", "unknown"))
-    role_class = _ROLE_MAP.get(role_raw, "system")
+    role_class = _ROLE_MAP.get(role_raw, "agent")
 
     content = _desensitize_text(
         str(event.get("output", "")) if event.get("output") else str(event.get("title", "")),
@@ -174,9 +167,9 @@ def desensitize_event_for_public(
     return {k: public[k] for k in _PUBLIC_FIELDS if k in public}
 
 
-# --- sample-level leak gate ---------------------------------------------------
+# --- sample-level clean gate ---------------------------------------------------
 def assert_sample_clean(public_events: Iterable[Dict[str, Any]], rules_path: Optional[str] = None) -> bool:
-    """Raise if any public sample leaks a blacklisted fingerprint.
+    """Raise if any public sample still carries a blacklisted fingerprint.
 
     The blacklist comes from desensitization_rules.json, falling back to a
     generic built-in blacklist when the file ships an empty list.
@@ -194,5 +187,5 @@ def assert_sample_clean(public_events: Iterable[Dict[str, Any]], rules_path: Opt
                 if pat.search(s):
                     hits.append((k, pat.pattern, s[:80]))
     if hits:
-        raise AssertionError("SAMPLE LEAK: %r" % hits[:5])
+        raise AssertionError("SAMPLE NOT CLEAN: %r" % hits[:5])
     return True
