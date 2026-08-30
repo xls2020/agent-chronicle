@@ -56,6 +56,10 @@ On 2026-07-11, a development agent, during a real task, automatically produced t
 
 Full text: [`chronicles/20260711_paper_bones.md`](chronicles/20260711_paper_bones.md) · [English](chronicles/20260711_paper_bones_EN.md)
 
+More chapters:
+
+- [`chronicles/20260720_sixth_reminder.md`](chronicles/20260720_sixth_reminder.md) · [English](chronicles/20260720_sixth_reminder_EN.md) — "The Sixth Reminder, and the Goodbye of 38,321 Bytes" (a redesign: rules bound to code)
+
 ---
 
 ## Public boundary

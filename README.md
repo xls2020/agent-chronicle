@@ -5,7 +5,6 @@
 [English](README_EN.md) | 中文
 
 > **语言政策**: 开源仓库全英文为主 (代码/注释/commit/docs)。README + 公开小说章节做双语。
-> 详见 [`MAINTENANCE/BILINGUAL_POLICY.md`](MAINTENANCE/BILINGUAL_POLICY.md)。
 
 ---
 
@@ -58,6 +57,10 @@ Agent Chronicle 是一个**可追溯的 AI 文学改写系统**，三层结构�
 > **"九秒，纸人长出了骨头。"**
 
 全文见 [`chronicles/20260711_paper_bones.md`](chronicles/20260711_paper_bones.md) · [English](chronicles/20260711_paper_bones_EN.md)
+
+更多章节：
+
+- [`chronicles/20260720_sixth_reminder.md`](chronicles/20260720_sixth_reminder.md) · [English](chronicles/20260720_sixth_reminder_EN.md) — 《第 6 次提醒，以及 38321 个字节的告别》（重设计与规则代码绑定）
 
 ---
 
